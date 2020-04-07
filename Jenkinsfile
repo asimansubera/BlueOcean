@@ -11,7 +11,7 @@ pipeline {
 
         stage('Sonar Test') {
           steps {
-            sh '''sh mvn clean package sonar:sonar -Dsonar.host.url=http://13.250.115.89:9000/ -Dsonar.login=1c96b646b7ce4a813dc88aa9670a98ecb776c460 -Dsonar.sources=. -Dsonar.tests=. -Dsonar.test.inclusions=**/test/java/servlet/createpage_junit.java -Dsonar.exclusions=**/test/java/servlet/createpage_junit.java
+            sh '''mvn sonar:sonar -Dsonar.host.url=http://13.250.115.89:9000/ -Dlicense.skip=true
 '''
           }
         }

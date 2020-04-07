@@ -11,7 +11,7 @@ pipeline {
 
         stage('Sonar Test') {
           steps {
-            sh '''sh mvn sonar:sonar -Dsonar.host.url=http://13.250.115.89:9000/ -Dlicense.skip=true
+            sh '''sh \'mvn sonar:sonar -Dsonar.host.url=http://13.250.115.89:9000/ -Dlicense.skip=true\'
 '''
           }
         }
